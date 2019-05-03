@@ -1,0 +1,209 @@
+package oyun;
+import java.util.Scanner;
+
+public class oyunTahtasi {
+    int n;
+    char[][] tahta;
+    
+    public oyunTahtasi(){
+        Scanner input =new Scanner(System.in);
+        System.out.print("Tahtanın boyutunu giriniz  (3,5 veya 7) :");
+        n=input.nextInt();
+        tahta=new char[n][n];
+        
+        for(int i=0;i<n;i++){
+            for(int j=0;j<n;j++){
+                tahta[i][j]='_';
+            }
+        }
+    }
+    
+    public oyunTahtasi(char[][] yeni,int e){
+        tahta=yeni;
+        n=e;
+    }
+    
+    public char[][] oyunTahtasiniAl(){
+        return tahta;
+    }
+    
+    public boolean kazanan(char oyuncu){
+        if(n==3){
+            if(tahta[0][0]==oyuncu && tahta[0][1]==oyuncu && tahta[0][2]==oyuncu){
+                return true;
+            }
+            else if(tahta[1][0]==oyuncu && tahta[1][1]==oyuncu && tahta[1][2]==oyuncu){
+                return true;
+            }
+            else if(tahta[2][0]==oyuncu && tahta[2][1]==oyuncu && tahta[2][2]==oyuncu){
+                return true;
+            }
+            else if(tahta[0][0]==oyuncu && tahta[1][0]==oyuncu && tahta[2][0]==oyuncu){
+                return true;
+            }
+            else if(tahta[0][1]==oyuncu && tahta[1][1]==oyuncu && tahta[2][1]==oyuncu){
+                return true;
+            }
+            else if(tahta[0][2]==oyuncu && tahta[1][2]==oyuncu && tahta[2][2]==oyuncu){
+                return true;
+            }
+            else if(tahta[0][0]==oyuncu && tahta[1][1]==oyuncu && tahta[2][2]==oyuncu){
+                return true;
+            }
+            else if(tahta[0][2]==oyuncu && tahta[1][1]==oyuncu && tahta[2][0]==oyuncu){
+                return true;
+            }
+            else
+                return false;
+        }
+        
+        if(n==5){
+            if(tahta[0][0]==oyuncu && tahta[0][1]==oyuncu && tahta[0][2]==oyuncu && tahta[0][3]==oyuncu && tahta[0][4]==oyuncu){
+                return true;
+            }
+            else if(tahta[1][0]==oyuncu && tahta[1][1]==oyuncu && tahta[1][2]==oyuncu && tahta[1][3]==oyuncu && tahta[1][4]==oyuncu){
+                return true;
+            }
+            else if(tahta[2][0]==oyuncu && tahta[2][1]==oyuncu && tahta[2][2]==oyuncu && tahta[2][3]==oyuncu && tahta[2][4]==oyuncu){
+                return true;
+            }
+            else if(tahta[3][0]==oyuncu && tahta[3][1]==oyuncu && tahta[3][2]==oyuncu && tahta[3][3]==oyuncu && tahta[3][4]==oyuncu){
+                return true;
+            }
+            else if(tahta[4][0]==oyuncu && tahta[4][1]==oyuncu && tahta[4][2]==oyuncu && tahta[4][3]==oyuncu && tahta[4][4]==oyuncu){
+                return true;
+            }
+            else if(tahta[0][0]==oyuncu && tahta[1][0]==oyuncu && tahta[2][0]==oyuncu && tahta[3][0]==oyuncu && tahta[4][0]==oyuncu){
+                return true;
+            }
+            else if(tahta[0][1]==oyuncu && tahta[1][1]==oyuncu && tahta[2][1]==oyuncu && tahta[3][1]==oyuncu && tahta[4][1]==oyuncu){
+                return true;
+            }
+            else if(tahta[0][2]==oyuncu && tahta[1][2]==oyuncu && tahta[2][2]==oyuncu && tahta[3][2]==oyuncu && tahta[4][2]==oyuncu){
+                return true;
+            }
+            else if(tahta[0][3]==oyuncu && tahta[1][3]==oyuncu && tahta[2][3]==oyuncu && tahta[3][3]==oyuncu && tahta[4][3]==oyuncu){
+                return true;
+            }
+            else if(tahta[0][4]==oyuncu && tahta[1][4]==oyuncu && tahta[2][4]==oyuncu && tahta[3][4]==oyuncu && tahta[4][4]==oyuncu){
+                return true;
+            }
+            else if(tahta[0][0]==oyuncu && tahta[1][1]==oyuncu && tahta[2][2]==oyuncu && tahta[3][3]==oyuncu && tahta[4][4]==oyuncu){
+                return true;
+            }
+            else if(tahta[0][4]==oyuncu && tahta[1][3]==oyuncu && tahta[2][2]==oyuncu && tahta[3][1]==oyuncu && tahta[4][0]==oyuncu){
+                return true;
+            }
+            else
+                return false;
+        }
+        if(n==7){
+            if(tahta[0][0]==oyuncu && tahta[0][1]==oyuncu && tahta[0][2]==oyuncu && tahta[0][3]==oyuncu && tahta[0][4]==oyuncu && tahta[0][5]==oyuncu && tahta[0][6]==oyuncu){
+                return true;
+            }
+            else if(tahta[1][0]==oyuncu && tahta[1][1]==oyuncu && tahta[1][2]==oyuncu && tahta[1][3]==oyuncu && tahta[1][4]==oyuncu && tahta[1][5]==oyuncu && tahta[1][6]==oyuncu){
+                return true;
+            }
+            else if(tahta[2][0]==oyuncu && tahta[2][1]==oyuncu && tahta[2][2]==oyuncu && tahta[2][3]==oyuncu && tahta[2][4]==oyuncu && tahta[2][5]==oyuncu && tahta[2][6]==oyuncu){
+                return true;
+            }
+            else if(tahta[3][0]==oyuncu && tahta[3][1]==oyuncu && tahta[3][2]==oyuncu && tahta[3][3]==oyuncu && tahta[3][4]==oyuncu && tahta[3][5]==oyuncu && tahta[3][6]==oyuncu){
+                return true;
+            }
+            else if(tahta[4][0]==oyuncu && tahta[4][1]==oyuncu && tahta[4][2]==oyuncu && tahta[4][3]==oyuncu && tahta[4][4]==oyuncu && tahta[4][5]==oyuncu && tahta[4][6]==oyuncu){
+                return true;
+            }
+            else if(tahta[5][0]==oyuncu && tahta[5][1]==oyuncu && tahta[5][2]==oyuncu && tahta[5][3]==oyuncu && tahta[5][4]==oyuncu && tahta[5][5]==oyuncu && tahta[5][6]==oyuncu){
+                return true;
+            }
+            else if(tahta[6][0]==oyuncu && tahta[6][1]==oyuncu && tahta[6][2]==oyuncu && tahta[6][3]==oyuncu && tahta[6][4]==oyuncu && tahta[6][5]==oyuncu && tahta[6][6]==oyuncu){
+                return true;
+            }
+            else if(tahta[0][0]==oyuncu && tahta[1][0]==oyuncu && tahta[2][0]==oyuncu && tahta[3][0]==oyuncu && tahta[4][0]==oyuncu && tahta[5][0]==oyuncu && tahta[6][0]==oyuncu){
+                return true;
+            }
+            else if(tahta[0][1]==oyuncu && tahta[1][1]==oyuncu && tahta[2][1]==oyuncu && tahta[3][1]==oyuncu && tahta[4][1]==oyuncu && tahta[5][1]==oyuncu && tahta[6][1]==oyuncu){
+                return true;
+            }
+            else if(tahta[0][2]==oyuncu && tahta[1][2]==oyuncu && tahta[2][2]==oyuncu && tahta[3][2]==oyuncu && tahta[4][2]==oyuncu && tahta[5][2]==oyuncu && tahta[6][2]==oyuncu){
+                return true;
+            }
+            else if(tahta[0][3]==oyuncu && tahta[1][3]==oyuncu && tahta[2][3]==oyuncu && tahta[3][3]==oyuncu && tahta[4][3]==oyuncu && tahta[5][3]==oyuncu && tahta[6][3]==oyuncu){
+                return true;
+            }
+            else if(tahta[0][4]==oyuncu && tahta[1][4]==oyuncu && tahta[2][4]==oyuncu && tahta[3][4]==oyuncu && tahta[4][4]==oyuncu && tahta[5][4]==oyuncu && tahta[6][4]==oyuncu){
+                return true;
+            }
+            else if(tahta[0][5]==oyuncu && tahta[1][5]==oyuncu && tahta[2][5]==oyuncu && tahta[3][5]==oyuncu && tahta[4][5]==oyuncu && tahta[5][5]==oyuncu && tahta[6][5]==oyuncu){
+                return true;
+            }
+            else if(tahta[0][6]==oyuncu && tahta[1][6]==oyuncu && tahta[2][6]==oyuncu && tahta[3][6]==oyuncu && tahta[4][6]==oyuncu && tahta[5][6]==oyuncu && tahta[6][6]==oyuncu){
+                return true;
+            }
+            else if(tahta[0][0]==oyuncu && tahta[1][1]==oyuncu && tahta[2][2]==oyuncu && tahta[3][3]==oyuncu && tahta[4][4]==oyuncu && tahta[5][5]==oyuncu && tahta[6][6]==oyuncu){
+                return true;
+            }
+            else if(tahta[0][6]==oyuncu && tahta[1][5]==oyuncu && tahta[2][4]==oyuncu && tahta[3][3]==oyuncu && tahta[4][2]==oyuncu && tahta[5][1]==oyuncu && tahta[6][0]==oyuncu){
+                return true;
+            }
+            else
+                return false;
+        }
+        
+        return false;
+    }
+    
+    public boolean hamleyiYaz(int i,int j,char oyuncu){
+        
+        if(tahta[i][j]=='_'){
+            tahta[i][j]=oyuncu;
+            return true;
+        }
+        else{
+            System.out.println("Daha önce kullanılmış koordinat, lütfen yeni koordinat giriniz!!");
+             return false;
+        }
+           
+    }
+    
+    public boolean pchamleyiYaz(int i,int j,char pc){
+        
+        if(tahta[i][j]=='_'){
+            tahta[i][j]=pc;
+            return true;
+        }
+        else
+            return false;
+        
+    }
+    
+    public boolean isFull(){
+        
+        for(int i=0;i<n;i++){
+            for(int j=0;j<n;j++){
+                if(tahta[i][j]=='_'){
+                    return false;
+                }
+            }
+        }
+        
+        return true;
+    }
+    
+    public void yazdir(){
+        
+        System.out.print("   ");
+        for(int i=0;i<n;i++){
+            System.out.print(i+" ");
+        }
+        System.out.println();
+        for(int i=0;i<n;i++){
+            System.out.print(i+" ");
+            for(int j=0;j<n;j++){
+                System.out.print(" "+tahta[i][j]);
+            }
+            System.out.println();
+        }
+    }
+    
+}
